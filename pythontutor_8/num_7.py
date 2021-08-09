@@ -1,8 +1,8 @@
-# Дан список, упорядоченный по неубыванию элементов в нем. Определите, сколько в нем различных элементов.
-s = 1
-n = input()
-a = [n for n in n.split()]
-for i in range(len(a) - 1):
-    if  a[i] != a[i+1]:
-        s += 1
-print(s)
+#Палиндром
+def palindrom(s):
+    if len(s) <= 1:
+        return True
+    if s[0] != s[-1]:
+        return  False
+    return palindrom(s[1:-1])
+print(palindrom("reeaeer"))
